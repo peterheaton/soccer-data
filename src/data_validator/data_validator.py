@@ -1,6 +1,6 @@
+import os
 import pandas as pd
 import great_expectations as ge
-import os
 
 # This module is just a script to test the ability of the Great Expectations to read from a generic data source and validate a data set.
 # May or may not use this for ingestion raw data files, but it may be use for validating data sets once staged in the database
@@ -18,3 +18,7 @@ json_file_path = os.path.join(sample_data_dir, 'new_jersey_sample.json')
 # Read the sample data from excel-based file and convert it to a json line-delimited format
 df = pd.read_excel(xl_file_path, sheet_name='Sheet1')
 df.to_json(json_file_path, orient='records', lines=True)
+
+# exp_df = ge.read_json(json_file_path)
+ 
+# print(exp_df.expect_column_values_to_be_in_set("Sex", ["male", "female"]))
