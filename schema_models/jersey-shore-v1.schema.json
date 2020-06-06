@@ -1,0 +1,114 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "title": "The root schema",
+    "description": "The root schema comprises the entire JSON document.",
+    "default": {},
+    "examples": [
+        {
+            "Organization Name": "FakeTeam Name",
+            "Identifier": "SomeUniquePlayer20080907",
+            "Date of Birth": 1220745600000,
+            "Gender": "Male",
+            "Zip": 8005,
+            "Registration Date": 1518912000000,
+            "Player Member Type": "Travel",
+            "Seasonal Year": "2017-2018"
+        }
+    ],
+    "required": [
+        "Organization Name",
+        "Identifier",
+        "Date of Birth",
+        "Gender",
+        "Zip",
+        "Registration Date",
+        "Player Member Type",
+        "Seasonal Year"
+    ],
+    "additionalProperties": true,
+    "properties": {
+        "Organization Name": {
+            "$id": "#/properties/Organization Name",
+            "type": "string",
+            "title": "The Organization Name schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "FakeTeam Name"
+            ]
+        },
+        "Identifier": {
+            "$id": "#/properties/Identifier",
+            "type": "string",
+            "title": "The Identifier schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "SomeUniquePlayer20080907"
+            ]
+        },
+        "Date of Birth": {
+            "$id": "#/properties/Date of Birth",
+            "type": "integer",
+            "title": "The Date of Birth schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0,
+            "examples": [
+                1220745600000
+            ]
+        },
+        "Gender": {
+            "$id": "#/properties/Gender",
+            "type": ["string", "null"],
+            "title": "The Gender schema",
+            "description": "An explanation about the purpose of this instance.",
+            "enum": ["female", "Male", "Female", null],
+            "default": "",
+            "examples": [
+                "Male"
+            ]
+        },
+        "Zip": {
+            "$id": "#/properties/Zip",
+            "type": ["string", "null"],
+            "title": "The Zip schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0,
+            "examples": [
+                8005
+            ]
+        },
+        "Registration Date": {
+            "$id": "#/properties/Registration Date",
+            "type": "integer",
+            "title": "The Registration Date schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0,
+            "examples": [
+                1518912000000
+            ]
+        },
+        "Player Member Type": {
+            "$id": "#/properties/Player Member Type",
+            "type": "string",
+            "title": "The Player Member Type schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "Travel"
+            ]
+        },
+        "Seasonal Year": {
+            "$id": "#/properties/Seasonal Year",
+            "type": "string",
+            "title": "The Seasonal Year schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "2017-2018"
+            ]
+        }
+    }
+}
