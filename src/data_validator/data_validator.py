@@ -30,19 +30,19 @@ def validate_file(file_name, validation_schema):
 
     print('Beginning to validate json data')
     start_time = time.time()
-    v = Draft7Validator(json_schema)
-    for index, record in enumerate(json_list):
-        # print(f'validating record {index + 1}')
-        try:
-            v.validate(record)
-        except Exception as e:
-            print(f'error on line {index + 1}:')
-            print(e)
-    print(f'''Finished validating json data.
-        Elapsed time: {time.time() - start_time} seconds''')
+    # v = Draft7Validator(json_schema)
+    # for index, record in enumerate(json_list):
+    #     # print(f'validating record {index + 1}')
+    #     try:
+    #         v.validate(record)
+    #     except Exception as e:
+    #         print(f'error on line {index + 1}:')
+    #         print(e)
+    # print(f'''Finished validating json data.
+    #     Elapsed time: {time.time() - start_time} seconds''')
 
 
-    return
+    return json_list
 
 
 if __name__ == "__main__": 
